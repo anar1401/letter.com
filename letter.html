@@ -1,0 +1,69 @@
+<html>
+	<head>
+	  <title>Form ve Elemanları</title>
+  
+	  <link rel="stylesheet" href="letter.css" />
+	</head>
+  
+	<body>
+	  <!-- 
+		- adı *
+		- telefon *
+		- email *
+		- mesaj
+		- yaşadığı şehir
+		- cinsiyet
+		  reset ve submit POST:https://httpbin.org/post
+	   -->
+  
+	  <form action="https://httpbin.org/post" method="POST">
+		<input type="hidden" value="s-500" name="product" />
+  
+		<div class="form-row">
+		  <label for="adi">Name</label>
+		  <input name="adi" id="adi" type="text" required placeholder="Anar Guliyev" />
+		</div>
+  
+		<div class="form-row">
+		  <label for="tel">Telephone</label>
+		  <input name="tel" id="tel" type="tel" required />
+		</div>
+  
+		<div class="form-row">
+		  <label for="email">Email</label>
+		  <input name="email" id="email" type="email" required />
+		</div>
+  
+		<div class="form-row">
+		  <label for="mesaj">Message</label>
+		  <textarea name="mesaj" id="mesaj" rows="3"></textarea>
+		</div>
+  
+		<div class="form-row">
+		  <label for="sehir">City</label>
+		  <select name="sehir" id="sehir">
+			<option value="34">Baku</option>
+			<option value="85" selected>Nakhchivan</option>
+			<option value="36" >Other</option>
+		  </select>
+		</div>
+  
+		<div class="form-row">
+		  <p>Which color do you like most?</p>
+  
+		  <div class="radio-container">
+			<label
+			  ><input type="radio" name="color" value="kirmizi" checked />
+			  Red</label
+			>
+			<label><input type="radio" name="color" value="yesil" /> Green</label>
+		  </div>
+		</div>
+  
+		<div class="form-row">
+		  <button type="reset">Reset</button>
+		  <button type="submit">Send</button>
+		</div>
+	  </form>
+	</body>
+  </html>
